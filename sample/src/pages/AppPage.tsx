@@ -4,11 +4,17 @@ import logo from '../images/logo.svg';
 import "./AppPage.css";
 
 export function AppPage() {
+  // sample
+  // 1: Vector Ink Demo
+  // 2: Raster Ink Demo
+  // 3: Mixed Ink Demo (Vector canvas + Raster brush)
+  // 4: Mixed Ink Demo (Raster canvas + Vector brush)
   const { sample } = useParams();
+
   const navigate = useNavigate();
 
   const sampleNumber = Number(sample);
-  const isParamValid = Number.isSafeInteger(sampleNumber);
+  const isParamValid = Number.isSafeInteger(sampleNumber) && (1 <= sampleNumber) && (sampleNumber <= 4);
 
   useEffect(() => {
     if (!isParamValid) {
@@ -18,8 +24,12 @@ export function AppPage() {
 
   if (!isParamValid) return <></>
 
+  let className = "app-page";
+  if (sampleNumber !== 2) className += " vector";
+  if (sampleNumber !== 1) className += " raster";
+
   return (
-    <>
+    <div className={className}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -37,6 +47,6 @@ export function AppPage() {
           Learn React
         </a>
       </header>
-    </>
+    </div>
   );
 }

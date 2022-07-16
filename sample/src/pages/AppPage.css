@@ -1,3 +1,13 @@
+/* sample */
+.raster .VectorPart {display: none;}
+.vector .RasterPart {display: none;}
+
+.vector.raster .VectorPart {display: inline-block;}
+.vector.raster .RasterPart {display: inline-block; margin-left: 30px;}
+
+.raster .PureVector {display: none !important;}
+
+/* Create React App */
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,0 +1,3 @@
+[submodule "sample/sdk-for-ink-web"]
+	path = sample/sdk-for-ink-web
+	url = git@github.com:mitaroThanken/sdk-for-ink-web.git

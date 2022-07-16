@@ -22,6 +22,7 @@ services:
       context: ./sample/.devcontainer
       args:
         - VARIANT=16-bullseye
+        - JAVA_VERSION=lts
     volumes:
       - .:/workspaces:cached
     command: /bin/sh -c "while sleep 1000; do :; done"

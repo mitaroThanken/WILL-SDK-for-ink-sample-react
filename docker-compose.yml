@@ -1,6 +1,6 @@
 services:
   haproxy:
-    image: haproxy-with-minica/haproxy
+    image: will-sdk-sample/haproxy
     build:
       context: ./haproxy
     ports:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - sample
   sample:
-    image: haproxy-with-minica/sample
+    image: will-sdk-sample/sample
     build:
       context: ./sample/.devcontainer
       args:

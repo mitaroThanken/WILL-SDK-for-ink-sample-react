@@ -5,7 +5,7 @@ Export certs
 ---
 
 ```shell
-docker container cp haproxy-with-minica-haproxy-1:/usr/local/etc/haproxy/certs - | tar xv
+docker container cp will-sdk-sample-haproxy-1:/usr/local/etc/haproxy/certs - | tar xv
 ```
 
 Install trusted root certification
